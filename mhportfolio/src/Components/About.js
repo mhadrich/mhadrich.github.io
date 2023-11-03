@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Experience from "../assets/Experience.json";
 import Education from "../assets/Education.json";
+import CV from "../assets/Malek-Hadrich-CV.pdf"
 
 function About() {
   const categories = ["Skills", "Experience", "Education"];
@@ -36,9 +37,9 @@ function About() {
           You can also download my Resume using the button below
         </text>
         <button className="w-48 h-12 bg-secondary rounded-3xl justify-center items-center flex hover:bg-highlight duration-1000">
-          <text className="text-base font-semibold font-['Open Sans']">
+          <a href={CV} download='Malek-Hadrich-CV' target="_blank" className="a-base font-semibold font-['Open Sans']">
             Download CV
-          </text>
+          </a>
         </button>
       </div>
       <div className="w-[80%] inline-flex justify-between items-center">

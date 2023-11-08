@@ -24,7 +24,7 @@ function About() {
     "Scrum",
     "Agile",
   ];
-  const [clicked, setClicked] = useState(null);
+  const [clicked, setClicked] = useState("Experience");
   return (
     <div className="flex flex-col bg-[#f9f9f9] dark:bg-tertiary p-20 items-center justify-center gap-20">
       <div className="flex flex-col gap-6 justify-center items-center">
@@ -68,8 +68,13 @@ function About() {
           );
         })}
       </div>
+      {clicked === null && (
+        <div className="w-[100%] h-36">
+          
+        </div>
+      )}
       {clicked === "Experience" && (
-        <div className="w-[100%]">
+        <div className="w-[100%] px-20">
           {Experience &&
             Experience.map((element, key) => {
               return (
@@ -90,7 +95,7 @@ function About() {
                       {element.description.split("\n").map((e, i) => (
                         <text
                           key={i}
-                          className="w-96 dark:text-white text-sm font-normal font-['Open Sans']"
+                          className="w-96 dark:text-white text- font-normal font-['Open Sans']"
                         >
                           {e}
                         </text>

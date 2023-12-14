@@ -9,7 +9,7 @@ function Testimonial() {
       <div className="inline-flex justify-between gap-20 w-[80%]">
         <div>
           {/* <div className="w-80 h-80 bg-lime-400 rounded-3xl" /> */}
-          <div className="w-80 h-80 overflow-hidden bg-lime-400 rounded-3xl">
+          <div className="w-80 h-80 overflow-hidden bg-lime-400 rounded-full hover:rounded-3xl transition-all ease-[cubic-bezier(1,0,0,1)] duration-1000">
             <img
               alt="picture"
               src="https://res.cloudinary.com/ddtfqfamn/image/upload/v1699012947/1599752841617_meoxxi.jpg"

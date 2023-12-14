@@ -1,28 +1,29 @@
 import React, { useState } from "react";
 import Experience from "../assets/Experience.json";
 import Education from "../assets/Education.json";
-import CV from "../assets/Malek-Hadrich-CV.pdf"
+import CV from "../assets/Malek-Hadrich-CV.pdf";
+import Rating from "react-rating";
 
 function About() {
   const categories = ["Skills", "Experience", "Education"];
   const Skills = [
-    "After Effects",
-    "Photoshop",
-    "Illustrator",
-    "Premiere",
-    "Figma",
-    "Davinci",
-    "Tailwind",
-    "CSS",
-    "Javascript",
-    "Typescript",
-    "HTML",
-    "React",
-    "Next 13",
-    "Rest API",
-    "SQL",
-    "Scrum",
-    "Agile",
+    ["After Effects", "5"],
+    ["Photoshop", "5"],
+    ["Illustrator", "4"],
+    ["Premiere", "4"],
+    ["Figma", "4"],
+    ["Davinci", "4"],
+    ["Tailwind", "4"],
+    ["CSS", "3"],
+    ["Javascript", "4"],
+    ["Typescript", "3"],
+    ["HTML", "3"],
+    ["React", "4"],
+    ["Next 13", "3"],
+    ["Rest API", "3"],
+    ["SQL", "3"],
+    ["Scrum", "4"],
+    ["Agile", "5"],
   ];
   const [clicked, setClicked] = useState("Experience");
   return (
@@ -37,7 +38,12 @@ function About() {
           You can also download my Resume using the button below
         </text>
         <button className="w-48 h-12 bg-secondary rounded-3xl justify-center items-center flex hover:bg-highlight duration-1000">
-          <a href={CV} download='Malek-Hadrich-CV' target="_blank" className="a-base font-semibold font-['Open Sans']">
+          <a
+            href={CV}
+            download="Malek-Hadrich-CV"
+            target="_blank"
+            className="a-base font-semibold font-['Open Sans']"
+          >
             Download CV
           </a>
         </button>
@@ -68,11 +74,6 @@ function About() {
           );
         })}
       </div>
-      {clicked === null && (
-        <div className="w-[100%] h-36">
-          
-        </div>
-      )}
       {clicked === "Experience" && (
         <div className="w-[100%] px-20">
           {Experience &&
@@ -115,13 +116,18 @@ function About() {
           {Skills &&
             Skills.map((element, key) => {
               return (
-                <div
-                  className="items-center justify-center flex my-14"
-                  key={key}
-                >
-                  <text className="dark:text-white text-center text-2xl font-medium font-['Open Sans'] hover:text-3xl duration-1000">
-                    {element}
-                  </text>
+                <div className="group">
+                  <div
+                    className="items-center justify-center flex flex-col my-14"
+                    key={key}
+                  >
+                    <text className="dark:text-white text-center text-2xl font-medium font-['Open Sans']  group-hover:text-3xl duration-1000 ease-in-out">
+                      {element[0]}
+                    </text>
+                    <div className="scale-50 dark:invert opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
+                      <Rating initialRating={element[1]} readonly={true} />
+                    </div>
+                  </div>
                 </div>
               );
             })}

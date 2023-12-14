@@ -4,7 +4,7 @@ function NavBar() {
   const linksStyle = "p-6 font-light";
   return (
     <div>
-      <div className="fixed z-50 flex py-6 px-20 w-screen flex-row justify-between items-center bg-white dark:bg-black h-20">
+      <div className="fixed z-50 flex py-6 px-20 w-screen flex-row drop-shadow-sm justify-between items-center bg-white dark:bg-black h-20">
         <svg
           className="w-11 fill-black dark:fill-white"
           width="454"

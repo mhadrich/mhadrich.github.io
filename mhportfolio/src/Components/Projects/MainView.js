@@ -115,7 +115,7 @@ function MainView() {
   return (
     <div className="w-screen flex flex-col dark:bg-black p-20 justify-center items-center gap-10">
       <div className="justify-center items-center flex flex-col">
-        <div className="text-white text-5xl font-['Lora']">
+        <div className="dark:text-white text-5xl font-['Lora']">
           Some curated work.
         </div>
         <div className="text-white  font-light font-['Open Sans']">
@@ -123,9 +123,7 @@ function MainView() {
         </div>
       </div>
       <div className="flex w-full overflow-x-auto relative">
-        <div className="flex-shrink-0 w-20 h-full bg-gradient-to-r from-transparent to-white absolute left-0"></div>
-        <div className="flex-shrink-0 w-20 h-full bg-gradient-to-l from-transparent to-white absolute right-0"></div>
-        <div className="flex gap-32 relative">
+        <div className="flex gap-20 relative px-4">
           {design.map((elem, key) => (
             <SingleView data={elem} key={key} />
           ))}

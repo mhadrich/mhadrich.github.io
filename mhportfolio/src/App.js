@@ -5,19 +5,16 @@ import Hero from "./Components/Hero";
 import ExternalLinks from "./Components/ExternalLinks";
 import About from "./Components/About";
 import Testimonial from "./Components/Testimonial";
+import MainView from "./Components/Projects/MainView";
 
 function App() {
   return (
-    <div className="flex flex-col scroll-smooth snap-mandatory snap-y">
+    <div className="flex flex-col dark:bg-black">
       <NavBar />
-      <div className="snap-center">
         <Hero />
         <ExternalLinks />
-      </div>
-
-      <div className="snap-center">
+        <MainView />
         <About />
-      </div>
       <Testimonial />
     </div>
   );

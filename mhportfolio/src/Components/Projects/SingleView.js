@@ -4,7 +4,7 @@ function SingleView({ data }) {
   return (
     <div className=" flex flex-col gap-4">
       <a
-        className="w-80 h-80 relative overflow-hidden rounded-3xl drop-shadow-sm items-center justify-center flex hover:drop-shadow-xl hover:rounded-xl transition-all duration-700"
+        className="w-96 h-96 relative overflow-hidden rounded-3xl drop-shadow-sm items-center justify-center flex hover:drop-shadow-xl hover:rounded-xl transition-all duration-700"
         target="_blank"
         rel="noreferrer"
         href={data.link}
